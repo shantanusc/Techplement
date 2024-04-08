@@ -42,7 +42,7 @@ public class CurrencyProgram {
         System.out.println("3 for view favorite one");
         System.out.println("4 for updating the favorite one");
         System.out.println("5 exit\n");
-        System.out.print("enter the option in number:");
+        System.out.print("Enter the option in number:");
         int num = scan.nextInt();
         method(num);
     }
@@ -104,7 +104,7 @@ public class CurrencyProgram {
             while ((inputLine = in.readLine())!=null){
                 responce.append(inputLine);
             }in.close();
-//            System.out.println(responce);
+//            System.out.println(response);
 
             String jsonresponce = responce.toString();
             JSONObject jsonObject = new JSONObject(jsonresponce);
@@ -131,13 +131,13 @@ public class CurrencyProgram {
             currencyName.add(newCurrencyName);
             System.out.println("currency " + newCurrencyName +" is added");
         }else {
-            System.out.println("currency is alredy exits");
+            System.out.println("currency is already exits");
         }
         CurrencyProgram.display();
     }
     public static void viewCurrency() throws JSONException, IOException {
         if(currencyName.isEmpty()){
-            System.out.println("no courrency is avilable");
+            System.out.println("no currency is available");
         }else{
             System.out.print("available currency are:");
             for (String currency:currencyName){
@@ -156,6 +156,8 @@ public class CurrencyProgram {
             if(currencyName.contains(oldCurrency)){
                 System.out.print("Enter the new currency:");
                 String newCurrency = scan.next().toUpperCase();
+                int index = currencyName.indexOf(oldCurrency);
+                currencyName.set(index, newCurrency);
                 System.out.println(oldCurrency+" updated to "+newCurrency );
             }else{
                 System.out.println("currency does not exist");
