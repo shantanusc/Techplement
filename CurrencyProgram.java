@@ -61,7 +61,8 @@ public class CurrencyProgram {
     }
 
     static void exit() {
-        System.out.println("thank you");
+        System.out.println("Thank you!");
+        System.out.println("The task has completed");
     }
 
     public static void convertCurrency() throws IOException, JSONException {
@@ -150,17 +151,19 @@ public class CurrencyProgram {
         if (currencyName.isEmpty()){
             System.out.println("no currency is added yet");
         }else{
-            System.out.println("Enter the currency");
+            System.out.println("Enter the currency to update");
             String oldCurrency = scan.next().toUpperCase();
             if(currencyName.contains(oldCurrency)){
-                System.out.println("Enter the new currency");
+                System.out.print("Enter the new currency:");
                 String newCurrency = scan.next().toUpperCase();
-                System.out.println(oldCurrency+ " update to "+ newCurrency);
+                System.out.println(oldCurrency+" updated to "+newCurrency );
             }else{
-                System.out.println("currency does't exit");
+                System.out.println("currency does not exist");
             }
-        }
+
+            }
         CurrencyProgram.display();
+
 
     }
 }
