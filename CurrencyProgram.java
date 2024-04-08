@@ -28,7 +28,7 @@ public class CurrencyProgram {
 
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("\\WELL COME TO THE CONNCERY CONVERTER\\");
+        System.out.println("\\WELL COME TO THE CURRENCY CONVERTER\\");
         System.out.println("-------------------------------------");
 
         display();
