@@ -38,9 +38,9 @@ public class CurrencyProgram {
     public static void display() throws JSONException, IOException {
         System.out.println("CHOOSE ONE OF THESE OPTION");
         System.out.println("1 for convert");
-        System.out.println("2 add your favorite once");
-        System.out.println("3 for view favorite once");
-        System.out.println("4 for updating the favorite once");
+        System.out.println("2 add your favorite one");
+        System.out.println("3 for view favorite one");
+        System.out.println("4 for updating the favorite one");
         System.out.println("5 exit\n");
         System.out.print("enter the option in number:");
         int num = scan.nextInt();
